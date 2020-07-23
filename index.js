@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 
 const port = process.env.PORT || 3000;
-const mongoURI = process.env.PORT || "mongodb://127.0.0.1:27017/Kumba";
+const mongoURI = process.env.mongoURI || "mongodb://127.0.0.1:27017/Kumba";
 
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.once("open", () => {
